@@ -1,5 +1,3 @@
-# quiz-1
-
 import tkinter as tk
 from tkinter import messagebox
 
@@ -7,7 +5,7 @@ window = tk.Tk()
 window.title("Tic Tac Toe")
 
 player = "X"
-buttons = 
+buttons = []
 
 def click(i):
     global player
@@ -41,7 +39,7 @@ def reset():
     global player
     player = "X"
     for b in buttons:
-        b"text" = ""
+        b["text"] = ""
 
 for i in range(9):
     btn = tk.Button(window, text="", font=("Arial", 40),
