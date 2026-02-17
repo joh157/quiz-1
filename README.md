@@ -1,13 +1,13 @@
-import tkinter as tk
-from tkinter import messagebox
+    import tkinter as tk
+    from tkinter import messagebox
 
-window = tk.Tk()
-window.title("Tic Tac Toe")
+    window = tk.Tk()
+    window.title("Tic Tac Toe")
 
-player = "X"
-buttons = []
+    player = "X"
+    buttons = []
 
-def click(i):
+    def click(i):
     global player
 
     if buttons[i]["text"] == "":
@@ -35,17 +35,18 @@ def click(i):
         # Switch player
         player = "O" if player == "X" else "X"
 
-def reset():
+    def reset():
+
     global player
     player = "X"
     for b in buttons:
         b["text"] = ""
 
-for i in range(9):
+    for i in range(9):
     btn = tk.Button(window, text="", font=("Arial", 40),
                     width=5, height=2,
                     command=lambda i=i: click(i))
     btn.grid(row=i//3, column=i%3)
     buttons.append(btn)
 
-window.mainloop()
+    window.mainloop()
